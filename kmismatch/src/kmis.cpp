@@ -403,14 +403,16 @@ void test_from_file(char *file_name) {
 		t[i] -= min;
 
 	delete[] c;
-	cout << "read " << n << " chars" << endl;
+	cout
+			<< "n \t m \t k \t Naive \t Abrah \t NK-m2 \t NK-sa \t Nsqm2 \t Nsqsa"
+			<< endl;
 
 	int M[] = { 100, 200, 1000, 2000 };
 	for (unsigned j = 0; j < sizeof(M) / sizeof(int); ++j) {
 		int m = M[j];
 		for (unsigned i = 0; i < sizeof(K) / sizeof(int); ++i)
 			for (int r = 0; r < 1; ++r) {
-				cout << file_name << " \t ";
+				//cout << file_name << " \t ";
 				int *p = pick_patt(t, n, m);
 				test(t, n, p, m, (int) (K[i] * m / 100));
 				cout << " OK" << endl;

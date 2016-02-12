@@ -105,8 +105,8 @@ private:
 			unsigned int hc = hSize;
 			for (int j = 0, e = m - i; j < e; ++j) {
 				hc = updateHash(hc, p[i + j]);
-				int e = hc % hSize;
-				hStart[e].push_back(entry(hc, i, j + 1));
+				int f = hc % hSize;
+				hStart[f].push_back(entry(hc, i, j + 1));
 			}
 		}
 	}
